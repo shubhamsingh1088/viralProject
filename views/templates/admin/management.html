@@ -1,0 +1,30 @@
+
+
+
+<div class="pageWrap" ng-controller="managementCtrl">
+
+	<div class="container-fluid">
+		<div class="row">
+
+			<div class="col-md-5 sideNav">
+				<br>
+				<a ui-sref="management.createMember">Create Member</a>
+				<br>
+				<br>
+				<a ui-sref="management.viewMember">View Members</a>
+				<br>
+				<br>
+				<a ui-sref="management.assignPost">Assign Post</a>
+				<br>
+				<br>
+			</div>
+
+			<div class="col-md-7 content">
+				<div class="container">
+					<div ui-view></div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>

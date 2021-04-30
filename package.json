@@ -1,0 +1,29 @@
+{
+  "name": "viralnew",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "shubham singh",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.7.9",
+    "bcrypt": "^3.0.7",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "^1.4.5",
+    "csv": "^1.1.1",
+    "express": "^4.17.1",
+    "express-fileupload": "^0.2.0",
+    "express-session": "^1.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.5",
+    "mongoose-title-case": "^0.1.1",
+    "mongoose-validator": "^2.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.2",
+    "query-string": "^6.13.1",
+    "request": "^2.88.2"
+  }
+}

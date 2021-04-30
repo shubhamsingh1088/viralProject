@@ -1,0 +1,50 @@
+
+<div class="login" ng-controller="profile">
+	<br>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-5">
+				<div class="loginForm">
+					<!-- <div class="formHead">Login Form</div> -->
+					<div class="container">
+						<form>
+							<br>
+							<input type="text" ng-disabled="disabled" class="form-control" id="inputName4" placeholder="Your username" ng-model="loginData.username">
+							<br>
+							<input type="password" ng-disabled="disabled" class="form-control" id="inputPassword4" placeholder="Your password" ng-model="loginData.password">
+
+							<button class="btn btn-success" style="width: 100%;" ng-disabled="disabled" 
+							ng-click="doLogin(loginData)">Login</button>
+
+							<div style="margin: 20px;">
+								<div class="row show-hide-message" ng-show="successMsg">
+									<div class="alert alert-primary" role="alert">
+										{{ successMsg }}
+									</div>
+								</div>
+								<div class="row show-hide-message" ng-show="errorMsg">
+									<div class="alert alert-danger" role="alert">
+										{{ errorMsg }}&nbsp
+										<a href="/resendActivation">
+											<button type="button" ng-show="expired" class="btn btn-primary">
+											Resend Activation Link</button>
+										</a>
+									</div>
+								</div>
+							</div>
+
+							<a ui-sref="resetPassword">
+								<button class="btn btn-danger" style="width: 70%;" ng-disabled="disabled">
+								Forgot Password</button>
+							</a>
+							<a ui-sref="resetUsername">
+								<button class="btn btn-warning" style="width: 70%;" ng-disabled="disabled">
+								Forgot Username</button>
+							</a>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

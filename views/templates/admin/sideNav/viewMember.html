@@ -1,0 +1,42 @@
+
+<!-- <div class="container-fluid"> -->
+
+	<br>
+	<div class="table-responsive" style="border-radius: 5px;">
+		<table class="table" style="width: 100%;">
+			<thead class="table-dark">
+				<tr>
+					<!-- <th scope="col">#</th> -->
+					<th scope="col">Name</th>
+					<th scope="col">Address</th>
+				    <th scope="col">Gender</th>
+				    <th scope="col">DOB</th>
+				    <th scope="col">Trade</th>
+				    <th scope="col">Aadhar NO</th>
+				    <th scope="col">Mobile No</th>
+				    <th scope="col">Whatsapp</th>
+				    <th scope="col">Area Of Interest</th>
+				    <th scope="col">Blood Group</th>
+				    <th scope="col">Image</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="member in members">
+					<!-- <th scope="row">1</th> -->
+					<td>{{member.name}}</td>
+					<td>{{member.address}}</td>
+					<td>{{member.gender}}</td>
+					<td>{{member.dob}}</td>
+					<td>{{member.trade}}</td>
+					<td>{{member.aadharNo}}</td>
+					<td>{{member.mobNo}}</td>
+					<td>{{member.whatsappNo}}</td>
+					<td>{{member.areaOI}}</td>
+					<td>{{member.bGroup}}</td>
+					<td><img ng-src="{{member.image}}" style="width: 200px; height: 200px;"></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+<!-- </div> -->

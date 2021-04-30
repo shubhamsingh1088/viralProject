@@ -1,0 +1,63 @@
+
+
+<div class="management" ng-controller="managementCtrl">
+	<form action="api/member" method="POST" encType="multipart/form-data">
+		<div class="row">
+
+			<div class="col-md-6">
+				<br>
+				<input type="text" name="name" class="form-label" placeholder="Name">
+				<br>
+				<input type="text" name="address" class="form-label" placeholder="address">
+				<br>
+				<label for="gender">Gender</label>
+				<select name="gender" id="gender" ng-model="gender.model">
+					<option ng-repeat="option in gender.availableOptions" value="{{option.name}}">
+						{{ option.name }}
+					</option>
+				</select>
+				<br>
+				<br>
+				<label for="dob">Date Of Birth</label>
+				<input type="date" name="dob" class="form-control" style="padding-bottom: 7px; padding-top: 7px; width: 70%;">
+				<br>
+				<label for="trade">Trade</label>
+				<select name="trade" id="trade" ng-model="trade.model">
+					<option ng-repeat="option in trade.availableOptions" value="{{option.name}}">
+						{{ option.name }}
+					</option>
+				</select>
+				<br>
+				<br>
+				<label for="bGroup">Blood Group</label>
+				<select name="bGroup" id="bGroup" ng-model="bGroup.model">
+					<option ng-repeat="option in bGroup.availableOptions" value="{{option.name}}">
+						{{ option.name }}
+					</option>
+				</select>
+				<br>
+			</div>
+
+			<div class="col-md-6">
+				<br>
+				<input type="text" name="aadharNo" class="form-label" placeholder="aadhar-no">
+				<br>
+				<input type="text" name="mobNo" class="form-label" placeholder="Mobile Number">
+				<br>
+				<input type="text" name="whatsappNo" class="form-label" placeholder="Whatsapp Number">
+				<br>
+				<input type="text" name="areaOI" class="form-label" placeholder="Area Of Interest">
+				<br>
+				<label for="Upload-Photo"><strong>Upload-Photo:-</strong></label>
+				<br>
+				<br>
+				<input type="file" name="file">
+				<br>
+				<br>
+				<input type="submit" class="btn btn-primary">
+				<br>
+				<br>
+			</div>
+		</div>
+	</form>
+</div>

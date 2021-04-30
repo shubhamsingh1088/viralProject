@@ -1,0 +1,67 @@
+
+<div class="signup" ng-controller="signup">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-7">
+        <!-- <h2>Whatever</h2> -->
+      </div>
+      <div class="col-md-5">
+        <div class="signupForm">
+          <div class="formsHead">SignUp Form</div>
+          <div class="container">
+            <form name="regForm" ng-submit="addUser(regData, regForm.$valid, confirmed)" novalidate>
+
+              <!-- <input type="text" ng-disabled="disabled" class="form-control" name="name" placeholder="Name" 
+              ng-model="regData.name" ng-pattern="/^(([a-zA-z]{3,20})+[ ]+([a-zA-z]{3,20})+)+$/" ng-minlength="3" 
+              ng-maxlength="20" required>
+              <p ng-show="(!regForm.name.$pristine && regForm.name.$error.required) || (regForm.$submitted && regForm.name.$error.required)">*This field is required</p>
+              <ul ng-show="(!regForm.name.$pristine && regForm.name.$error.pattern) || (!regForm.name.$pristine && regForm.name.$error.minlength) || (!regForm.name.$pristine && regForm.name.$error.maxlength)">
+                <li style="color: white;">Must have a space in between first and last name</li>
+                <li style="color: white;">Must not contain any special characters</li>
+                <li style="color: white;">Must not contain any numbers</li>
+                <li style="color: white;">Must be atleast 3 characters but no more than 20</li>
+              </ul> -->
+
+              <!-- <input type="email" ng-disabled="disabled" class="form-control" name="email" placeholder="Email" ng-model="regData.email" ng-minlength="3" ng-maxlength="55" ng-pattern="/^\w+@[a-zA-z_]+?\.[a-zA-z]{2,3}$/" required>
+              <p ng-show="(!regForm.email.$pristine && regForm.email.$error.required) || (regForm.$submitted && regForm.email.$error.required)">*This field is required</p>
+              <ul style="color: red;" ng-show="(!regForm.email.$pristine && regForm.email.$error.pattern) || (!regForm.email.$pristine && regForm.email.$error.minlength) || (!regForm.email.$pristine && regForm.email.$error.maxlength)">
+                <li style="color: white;">Must contain "@"</li>
+                <li style="color: white;">Must not contain any special characters</li>
+              </ul> -->
+
+              <br>
+              <input type="text" ng-disabled="disabled" class="form-control" name="username" placeholder="Username" 
+              ng-model="regData.username" 
+              ng-minlength="3" ng-maxlength="25" ng-pattern="/^(?!.*?[\W])(?=.*?[a-zA-z]|=.*?[A-Z]).{3,16}$/" required>
+
+              <br>
+              <input type="password" ng-disabled="disabled" class="form-control" name="firstPassword" placeholder="Password" ng-model="firstPassword" ng-minlength="4" ng-maxlength="35" required>
+
+              <br>
+              <input type="password" ng-disabled="disabled" class="form-control" name="confirmPassword" placeholder="confirm password" ng-model="confirm" match="{{[firstPassword]}}" ng-change="regData.password = confirm" required>            
+
+              <br>
+              <button type="submit" ng-disabled="disabled" class="btn btn-primary">Sign up</button>
+
+            </form>
+          </div>
+          <div class="status" style="margin: 20px;">
+            <div class="row show-hide-message" ng-show="successMsg">
+              <div class="alert alert-primary" role="alert">
+                {{ successMsg }}
+              </div>
+            </div>
+            <div class="row show-hide-message" ng-show="errorMsg">
+              <div class="alert alert-danger" role="alert">
+                {{ errorMsg }}
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

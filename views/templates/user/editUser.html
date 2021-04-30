@@ -1,0 +1,84 @@
+
+<div ng-controller="editUserCtrl">
+	<div class="container">
+
+		<div class="col-md-6">
+			<div class="page-header">
+				<br>
+				<br>
+				<h1>Edit Profile</h1>
+			</div>
+			<br>
+			<ul class="list-group list-group-vertical">
+				<li class="list-group-item" ng-click="usernamePhase()" ng-class="usernameTab"><a ui-sref="#">Username</a></li>
+				<li class="list-group-item" ng-click="emailPhase()" ng-class="emailTab"><a ui-sref="#">E-mail</a></li>
+				<li class="list-group-item" ng-click="passwordPhase()" ng-class="passwordTab"><a ui-sref="#">Password</a></li>
+				<li class="list-group-item" ng-click="numberPhase()" ng-class="numberTab"><a ui-sref="#">Number</a></li>
+			</ul>
+		</div>
+		<br>
+		<form name="regForm" ng-submit="updateUserProfile(regForm.$valid)" novalidate>
+
+			<div ng-show="phase1">
+				<div class="form-group col-md-6">
+					<label for="inputUsername4" style="color: black;">UserName</label>
+					<input type="text" class="form-control" name="username" placeholder="Username" ng-model="Username" 
+					ng-minlength="3" ng-maxlength="25" ng-pattern="/^(?!.*?[\W])(?=.*?[a-zA-z]|=.*?[A-Z]).{3,16}$/" required>
+					<p class="form-text text-muted" ng-show="(!regForm.username.$pristine && regForm.username.$error.required) || 
+					(regForm.$submitted && regForm.username.$error.required)">This field is required</p>
+					<ul class="text-muted" ng-show="(!regForm.username.$pristine && regForm.username.$error.pattern) || (!regForm.username.$pristine && regForm.username.$error.minlength) || (!regForm.username.$pristine && regForm.username.$error.maxlength)">
+						<li>Must not contain any special characters or spaces</li>
+						<li>Must be atleast 3 characters but no more than 25</li>
+					</ul>
+				</div>
+			</div>
+
+			<div ng-show="phase3">
+				<div class="form-group col-md-6">
+					<label for="inputEmail4">Email</label>
+					<input type="text" class="form-control" name="email" placeholder="Email" ng-model="Email" ng-minlength="3" ng-maxlength="35" ng-pattern="/^\w+@[a-zA-z_]+?\.[a-zA-z]{2,3}$/" required>
+					<p class="form-text text-muted" ng-show="(!regForm.email.$pristine && regForm.email.$error.required) || (regForm.$submitted && regForm.email.$error.required)">This field is required</p>
+					<ul class="text-muted" ng-show="(!regForm.email.$pristine && regForm.email.$error.pattern) || (!regForm.email.$pristine && regForm.email.$error.minlength) || (!regForm.email.$pristine && regForm.email.$error.maxlength)">
+						<li>Must contain "@"</li>
+						<li>Must not contain any special characters</li>
+						<li>Must be atleast 3 characters but no more than 25</li>
+					</ul>
+				</div>
+			</div>
+
+			<div ng-show="phase4">
+				<div class="form-group col-md-6">
+					<label for="inputPassword4">Password</label>
+					<input type="text" class="form-control" name="password" placeholder="Password" ng-model="password">
+				</div>
+			</div>
+
+			<div ng-show="phase5">
+				<div class="form-group col-md-6">
+					<label for="inputNumber4">Number</label>
+					<input type="text" class="form-control" name="number" placeholder="Number" ng-model="Number" min="10" max="10"name="number" ng-pattern="/^[6-7-8-9][0-9]{9}$/" required>
+					<p class="form-text text-muted" ng-show="(!regForm.number.$pristine && regForm.number.$error.required) || (regForm.$submitted && regForm.number.$error.required)">This field is required</p>
+				</div>
+			</div>
+			<br>
+			<br>
+			<button type="submit" ng-disabled="disabled" style="margin-left: 14px;" class="btn btn-primary">Update</button>
+		</form>
+	</div>
+	<br>
+
+	<div class="container">
+		<div class="row show-hide-message" ng-show="successMsg">
+			<div class="alert alert-primary" role="alert">
+				{{ successMsg }}
+			</div>
+		</div>
+
+		<div class="row show-hide-message" ng-show="errorMsg">
+			<div class="alert alert-danger" role="alert">
+				{{ errorMsg }}
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,24 @@
+
+<div class="Account-Activation" ng-controller="emailCtrl">
+
+<div class="page-header">
+	<h1>Account activation</h1>
+</div>
+
+<br>
+
+<div class="container">
+	<div class="row show-hide-message" ng-show="successMsg">
+		<div class="alert alert-primary" role="alert">
+			{{ successMsg }}
+        </div>
+    </div>
+
+    <div class="row show-hide-message" ng-show="errorMsg">
+    	<div class="alert alert-danger" role="alert">
+    		{{ errorMsg }}
+        </div>
+    </div>
+</div>
+
+</div>

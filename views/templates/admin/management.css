@@ -1,0 +1,150 @@
+
+.custTable {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#v-pills-tab a {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.sideNav {
+	margin-top: 50px;
+	padding-bottom: 20px;
+	height: 100%;
+	width: 260px;
+	border-radius: 10px;
+	margin-left: 10px;
+	position: sticky;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	background-color: #dee2ff;
+	overflow-x: hidden;
+	padding-top: 20px;
+}
+
+.sideNav a {
+	color: #333;
+	text-decoration: none;
+}
+
+.content {
+	background-color: #aad8d3;
+	margin-top: 50px;
+	margin-left: 100px;
+	border-radius: 10px;
+	color: #333;
+}
+
+.managementTable {
+	width: 100%;
+	height: auto;
+	overflow: auto;
+	white-space: nowrap;
+}
+
+@media only screen and (max-width: 720px) {
+	div.content {
+		margin: auto;
+		width: 80%;
+		margin-top: 30px;
+	}
+	div.managementTable {
+		width: 100%;
+		margin: auto;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	div.sideNav {
+		position: static;
+		width: 80%;
+		margin: auto;
+	}
+	div.custTable {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	div.custCall button {
+		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 510px) {
+	div.content {
+		margin: auto;
+		width: 80%;
+		margin-top: 30px;
+	}
+	div.managementTable {
+		width: 100%;
+		margin: auto;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	div.sideNav {
+		position: static;
+		width: 80%;
+		margin: auto;
+	}
+	div.custTable {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	div.custCall button {
+		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 410px) {
+	div.content {
+		margin: auto;
+		width: 80%;
+		margin-top: 30px;
+	}
+	div.managementTable {
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	div.sideNav {
+		position: static;
+		width: 80%;
+		margin: auto;
+	}
+	div.custTable {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	div.custCall button {
+		margin: 5px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	div.content {
+		margin: auto;
+		width: 80%;
+		margin-top: 30px;
+	}
+	div.managementTable {
+		width: 100%;
+		height: auto;
+		overflow: auto;
+		white-space: nowrap;
+	}
+	div.sideNav {
+		position: static;
+		width: 80%;
+		margin: auto;
+	}
+	div.custTable {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+	div.custCall button {
+		margin: 5px;
+	}
+}

@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en" ng-app="newApp">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="logo.jpg" type="image/x-icon" style="margin-top: 3px;">
+	<title>New Project</title>
+	<base href="/">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="templates/login/login.css">
+	<link rel="stylesheet" type="text/css" href="templates/login/signup.css">
+	<link rel="stylesheet" type="text/css" href="templates/admin/management.css">
+</head>
+<body ng-controller="profile">
+    <navbar></navbar>
+	<div ui-view></div>
+
+	<script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/@uirouter/angularjs/release/angular-ui-router.min.js"></script>
+    <script src="lib/angular-local-storage/dist/angular-local-storage.min.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/route.js"></script>
+    <script src="scripts/alllogin.js"></script>
+    <script src="scripts/authService.js"></script>
+    <script src="scripts/memberService.js"></script>
+    <script src="scripts/app.directive.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>
